@@ -1,0 +1,51 @@
+
+<div class="navbar navbar-dark text-light bg-dark" style="position:relative;margin: top 10px;">
+  <div class="contaier-fluid">
+     <h3 style="color:white;">PRODUCT COMMUNITY</h3>
+ </div>
+     
+ <div class="d-flex">
+  <button class="btn btn-info"  (click)="back()" >BACK</button>&nbsp;&nbsp;
+  <router-outlet></router-outlet>
+   </div>
+ 
+ 
+ </div>
+ 
+
+  <form class="container col-md-9">
+    <div class="form-group">
+      <label for="productcode">Product-Code</label>
+      <input type="text" class="form-control" id="productcode" 
+      [(ngModel)]="productReview.productcode" readonly placeholder="{{code}}"  
+      name="productcode"
+      aria-describedby="emailHelp"  >
+    </div>
+
+
+    <div class="form-group">
+      <label for="rating">rating</label>
+      <input type="number" class="form-control" 
+      min="1" max="5"
+      [(ngModel)]="productReview.productrating" required  name="productrating"
+      #productrating="ngModel"
+      id="productrating" placeholder="Rating" >
+      <small id="productrating" class="text-danger" [class.d-none]="productrating.valid || productrating.untouched">*Rating</small>
+
+    </div>
+      
+    
+   
+    <div class="mb-3 form-group">
+        <label for="textarea" class="form-label" >Review</label>
+        <textarea rows="5" name="review" id="textarea"  
+        class="form-control" required 
+        [(ngModel)]="productReview.productreview" name="productreview"
+        #productreview="ngModel"
+            placeholder="Review"></textarea>
+            <small id="productreview" class="text-danger" [class.d-none]="productreview.valid || productreview.untouched">*Review </small>
+
+          </div>
+          <button  type="submit" class="btn btn-info container" (click)="registerreview()">Submit</button>
+          {{msg}}
+        </form>

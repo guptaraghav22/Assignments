@@ -1,0 +1,41 @@
+<div class="navbar navbar-dark text-light bg-dark" style="position:relative;margin: top 10px;">
+  <div class="contaier-fluid">
+     <h3 style="color:white;">PRODUCT COMMUNITY</h3>
+ </div>
+     
+ <div class="d-flex">
+  <a href="/homepage" style="text-decoration:none ;color:white"><h3>HOME-PAGE</h3></a>&nbsp;&nbsp;&nbsp;&nbsp;
+ 
+  <a href="/register" style="text-decoration:none ;color:white"><h3>SIGN-UP</h3></a>&nbsp;&nbsp;
+     <router-outlet></router-outlet>
+   </div>
+ 
+ 
+ </div>
+ 
+<form #loginform="ngForm" class="container col-sm-6 " style="margin-top:50px" (ngSubmit)="login()">
+  <div class="form-group" >
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" 
+    [(ngModel)]="user.emailid" name="emailid" required #emailid="ngModel" class="form-control"
+      id="exampleInputEmail" aria-describedby="emailHelp" 
+      placeholder="Enter email"
+      [class.is-invalid]="emailid.invalid && emailid.touched">
+    <small id="emailHelp" class="text-danger" [class.d-none]="emailid.valid || emailid.untouched">*Email</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" name="password" [(ngModel)]="user.password"
+     id="exampleInputPassword1"
+      placeholder="Password" required #password="ngModel"
+       [class.is-invalid]="password.invalid && password.touched">
+    <small id="pass" class="text-danger" [class.d-none]="password.valid || password.untouched">*Password</small>
+
+  </div>
+  <div class="form-group form-check">
+
+    <label class="form-check-label" style="color: red;">{{msg}}</label>
+  </div>
+  <button type="submit" class="btn btn-info container">Login</button>
+  <label class="text-bold" style="color: red;">{{errmsg}}</label>
+</form>

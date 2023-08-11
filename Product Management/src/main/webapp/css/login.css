@@ -1,0 +1,30 @@
+.inputarea{
+   margin-left: 10px;
+    width: 443px
+}
+.credentials{
+    margin: 30px 170px ;
+    width: 850px;
+}
+.heading{
+    width: 100%;
+    background: #6fa9c4;
+    border: 1px solid #69cdfc;
+}
+.login-details{
+    height: 170px;
+    background: #b1d3ea;
+    border: 1px solid #69cdfc;
+}
+.loginbtn{
+    margin-left: 1020px;
+}
+.imp{
+    margin-left: 252px;
+    color: red;
+}
+.container{
+    margin-top: 120px;
+
+}
+

@@ -1,0 +1,119 @@
+#navbar{
+    
+    
+    height: 3rem;
+    background-color:rgba(70,215,172,255);
+    text-align: center;
+    color: white;
+    padding-top: 0.4rem;
+    margin-bottom: 0.6rem;
+    overflow: hidden;
+}
+
+ 
+/*------- main---------------------- main class------------*/
+.mainclass {
+    margin: 10px;
+}
+
+/*-------------- Registration Page ------------------- */
+.border-right{
+    border-right: 3px solid rgba(70,215,172,255);
+}
+
+.form-group{
+    margin:12px;
+}
+
+.form-check{
+    margin-right: 10px;
+}
+
+.skills{
+    display: flex;
+}
+
+.mybtn{
+    margin: 20px 12px;
+    margin-left: 0px;
+}
+/*Display page------------------*/
+.DisplaySection
+{
+    text-align: center;
+
+}
+
+.index
+{   padding-top:5px;
+    
+    height: 30px;
+    border: solid rgb(174, 194, 68);
+    background-color:rgb(174,194, 68) ;
+    font-weight: bold;
+    color: white;
+}
+
+
+.myid
+{
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 400px;
+}
+.id-card-list
+{   
+    align-items: center;
+    padding:0px ;
+
+
+}
+.id-card
+{
+    font-size: 10px;
+    width:400px;
+    height: 200px;
+    margin:auto;    
+}
+ul{
+    list-style-type: none;
+}
+li.ul{
+    border: solid rgb(174,194, 68);
+    border-top:none ;
+    animation: fadInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode:forwards;
+}
+
+@keyframes FadeInAnimation
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+li.ul:nth-child(even)
+{
+    background-color: rgba(70,215,172,255);
+}
+img{
+    margin: 7px;
+    width: 105px;
+    height: 105px;
+    object-fit: cover;
+    position: relative;
+}
+/*------ footer------------------------*/
+.footer
+{
+    width:99%;
+    height: 30px;
+    background-color: rgba(70,215,172,255);
+    color: white;
+    text-align: center;
+    margin-top: 150px;
+}
